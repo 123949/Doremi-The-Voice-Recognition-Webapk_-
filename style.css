@@ -1,0 +1,642 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('img/img.jpg') no-repeat;
+    background-size: 100% 100vh;
+    background-color: black;
+    color: white;
+}
+
+body.light {
+    background: url('img/img.jpg') no-repeat;
+    background-size: 100% 100vh;
+    background-color: white;
+}
+
+
+/*==============================
+    css for loader
+    ============================*/
+
+#loader {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background: url('img/preloader.gif')no-repeat center;
+    background-color: white;
+    background-size: 10%;
+    z-index: 999;
+}
+
+
+/*==============================
+    css for top portion 
+    ============================*/
+
+.header {
+    /* border:2px solid red; */
+    color: white;
+    height: auto;
+    /* font-size:24px; */
+    display: flex;
+    flex-direction: column;
+    margin: 17.5% 3%;
+}
+
+.header h1 {
+    color: white;
+    font-size: 70px;
+}
+
+.header h3 {
+    font-size: 70px;
+}
+
+.header h3>span {
+    color: blueviolet;
+    animation-name: colorBrand;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+.header p>span {
+    color: rgb(224, 0, 157);
+    animation-name: colorBrand;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+
+/*=================================
+    dark and light mode 
+    ============================*/
+
+.toggleClass {
+    /* border: 2px solid red; */
+    background: url(img/sun.png);
+    background-size: 66%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    width: 5%;
+    height: 18%;
+    position: absolute;
+    top: 7%;
+    right: 6%;
+}
+
+body.light .toggleClass {
+    background: url(img/moon.png);
+    background-repeat: no-repeat;
+    background-size: 66%;
+    width: 5%;
+    height: 18%;
+}
+
+
+/* ===================
+   scroll bar
+   ==================  */
+
+.scroll_bar {
+    border: 2px solid white;
+    width: 61px;
+    height: 58px;
+    position: absolute;
+    left: 45%;
+    bottom: 10%;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+
+/* ======================
+for inside arrow of scrol bar
+============================= */
+
+.scroll_bar::before,
+.scroll_bar::after {
+    content: "";
+    border: 2px solid white;
+    position: absolute;
+    left: 44%;
+    bottom: 11%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-34%, -93%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation-name: scroll_bar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.scroll_bar::after {
+    top: 50%;
+}
+
+@keyframes scroll_bar {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*=================================
+   css for navigation bar
+===============================*/
+
+.container_of_instruction {
+    color: white;
+    /* height:1000px; */
+}
+
+.navbar {
+    color: white;
+    display: flex;
+    background-color: red;
+    height: 80px;
+    /* margin-bottom:10px; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+    background: black;
+    /* border:2px solid black; */
+    /* position: fixed; */
+    /* opacity:0.5; */
+    position: relative;
+}
+
+body.light .navbar {
+    color: white;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+    background: white;
+    /* border:2px solid black; */
+}
+
+.brand {
+    color: blueviolet;
+    font-size: 2rem;
+    font-weight: 550;
+    animation-name: colorBrand;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes colorBrand {
+    25% {
+        color: chartreuse;
+        transition-property: all;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
+    }
+    50% {
+        color: darkgoldenrod;
+        transition-property: all;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
+    }
+    75% {
+        color: deeppink;
+        transition-property: all;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
+    }
+    99% {
+        color: lime;
+        transition-property: all;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+.navbar .logo img {
+    height: 7%;
+    width: 29%;
+    margin-top: 10px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0px 10px;
+    /* background-color:white; */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    /* color:black; */
+}
+
+body.light .navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: ease;
+}
+
+body.light .navbar ul li a:hover,
+body.light .navbar ul li a.active {
+    background-color: black;
+    color: white;
+}
+
+.navbar .menu-btn {
+    color: white;
+    font-size: 25px;
+    display: none;
+}
+
+
+/* #check:checked ~ul{
+     left:0;
+ } */
+
+#check {
+    display: none;
+}
+
+
+/*===============================
+    instruction_of_assistant 
+    ==============================*/
+
+.instruction_of_assistant {
+    /* border:2px solid white; */
+    /* height:500px; */
+    width: 75%;
+    margin: 35px auto;
+    /* box-shadow:3px 3px 5px white; */
+    color: white;
+}
+
+
+/* .instruction_of_assistant:hover{
+        box-shadow:5px 9px 10px white;
+    } */
+
+.instruction_of_assistant h3 span {
+    color: blueviolet;
+    animation-name: colorBrand;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+.instruction_of_assistant h3 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.instruction_of_assistant p {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+
+/* for white efect */
+
+body.light .instruction_of_assistant {
+    /* border:2px solid black;
+        box-shadow: 2px 2px 4px black; */
+    color: black;
+}
+
+body.light .instruction_of_assistant h3 {
+    color: black;
+}
+
+
+/*=========================
+    assistant section 
+    ======================*/
+
+.assistant_section {
+    color: white;
+    height: 100vh;
+    /* border:2px solid red; */
+    margin-top: 11%;
+    /* background-color:black; */
+}
+
+.assistant_section .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border:2px solid red; */
+    height: 93vh;
+    flex-direction: column;
+}
+
+.assistant_section .container h3 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    position: relative;
+    top: -112px;
+}
+
+.assistant_section h3 span {
+    color: blueviolet;
+    animation-name: colorBrand;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+.assistant_section h3 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.assistant_section .container h4 {
+    margin: 10px 0px;
+}
+
+
+/* .assistant_section .container img{
+        /* border:2px solid black; 
+       
+    } */
+
+body.light .assistant_section {
+    color: black;
+}
+
+
+/* css for gif*/
+
+.assistant_section .container img {
+    /* border: 2px solid white; */
+    width: 34%;
+    position: relative;
+    top: -45px;
+}
+
+.assistant_section .container div img {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    left: 21%;
+    width: 60%;
+    top: -107%;
+}
+
+body.light .assistant_section {
+    background-color: white;
+}
+
+body.light .assistant_section h3 {
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    position: relative;
+    top: -77px;
+    left: 10px;
+}
+
+
+/*=====================================end===============================*/
+
+
+/*==========================
+       team section start
+       ======================*/
+
+.team_section {
+    padding-top: 5%;
+}
+
+.single_team_member {
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+.single_team_member:hover .teamMember_social_details {
+    cursor: pointer;
+    opacity: 1;
+    transform: rotateY(0deg) scale(1, 1);
+}
+
+.img_of_teamMember {
+    overflow: hidden;
+    position: relative;
+}
+
+.img_of_teamMember img {
+    width: 100%;
+    /* height:100px; */
+    transition: all 0.4s ease 0s;
+}
+
+.img_of_teamMember:hover img {
+    transform: scale(1.2);
+}
+
+@media (max-width:768px) {
+    .img_of_teamMember img {
+        display: inline-block;
+    }
+}
+
+.img_of_teamMember .teamMember_social_details {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+    opacity: 0;
+    transition: 5s;
+    transform: rotateY(180ddeg) scale(0.5, 0.5);
+}
+
+.teamMember_social_details ul {
+    text-align: center;
+    position: relative;
+    top: 200px;
+}
+
+.img_of_teamMember .teamMember_social_details ul li a {
+    border: 1px solid white;
+    color: white;
+    display: block;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    ;
+}
+
+.img_of_teamMember .teamMember_social_details ul li a:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid transparent;
+}
+
+.text_for_img {
+    padding: 25px;
+    color: black;
+    text-align: center;
+}
+
+body.light .text_for_img {
+    color: white;
+}
+
+.text_for_img h3 {
+    margin: 0 0 5px;
+    font-size: 30px;
+    font-family: bignoodletitling;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.text_for_img h5 {
+    font-size: 17px;
+    font-family: bignoodletitling;
+    font-weight: bold;
+}
+
+.row_of_team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single_team_member {
+    border: 2px solid #fff0f0;
+    width: 321px;
+    height: 496px;
+    margin: 20px;
+    background: white;
+    color: black;
+}
+
+body.light .single_team_member {
+    background: black;
+}
+
+.img_of_teamMember img {
+    width: 100%;
+    height: 391px;
+}
+
+.img_of_teamMember img:nth-child(2) {
+    width: 90%;
+}
+
+.container_of_teams_section {
+    text-align: center;
+    color: white;
+}
+
+body.light .container_of_teams_section {
+    color: black;
+}
+
+.container_of_teams_section h5 {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.container_of_teams_section h2 {
+    font-size: 60px;
+    letter-spacing: 5px;
+    text-decoration: azure;
+    font-weight: 600;
+}
+
+.container_of_teams_section p {
+    margin: 20px auto;
+    width: 60%;
+    text-align: center;
+}
+
+
+/*===========================
+   footer css
+   ===========================*/
+
+.FooterOfDoremi {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #453d3c;
+}
+
+.FooterOfDoremi h2 {
+    padding: 1% 10%;
+}

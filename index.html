@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Personal web assistant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-com[atible" content="ie=edge">
+
+    <link rel="stylesheet" href="">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="moblie.css">
+    <link rel="stylesheet" href="tab.css">
+    <link rel="stylesheet" href="BigMoblie.css">
+
+
+
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/6d06b629b2.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload='myFun()'>
+    <!--=======================
+        this is for loader 
+    ===========================-->
+    <!-- <div id="loader"></div> -->
+    <!--============================end=====================================-->
+
+    <!--this is for head section-->
+    <header class="header">
+        <H1>Hi,</H1>
+        <h3>i Am <span>Doremi</span></h3>
+        <p>The <span>Personal Assistant</span> And Voice Recognition</p>
+        <a href="#about">
+            <div class="scroll_bar"></div>
+        </a>
+
+    </header>
+    <div class="toggleClass" onclick="toggleClass()"> </div>
+
+    <!--===========================
+      NAVBAR SECTION
+    ===========================-->
+    <div id="about" class="container_of_instruction">
+        <div class="navbar">
+            <!-- <div class="logo"><img src="img/logo.png"></div> -->
+            <div class="brand">Doremi</div>
+            <input type="checkbox" id="check">
+            <Label for="check" class="menu-btn">
+               <i class="fas fa-bars"></i>
+           </Label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about" class="active">about</a></li>
+                <li><a href="#Voice_recognition">Voice-recognition</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#">Contect us</a></li>
+            </ul>
+        </div>
+        <!-- part of instruction-->
+
+        <div class="instruction_of_assistant">
+            <h3>Hi, i Am <span>Doremi</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia enim illo magnam repudiandae sequi facere earum veniam recusandae quisquam illum aspernatur voluptatem corporis dolorum iste, rem numquam eaque. Quia excepturi dolores et, similique
+                molestiae odit vero harum cumque qui est architecto nesciunt dolorum quasi ut voluptatibus, quam ad impedit aperiam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, possimus distinctio explicabo minus architecto laborum iure sit eaque consequuntur, enim aperiam quo omnis quae, temporibus harum ad sed asperiores dolorum laudantium totam
+                beatae blanditiis ipsam! Modi nam eius labore exercitationem temporibus enim? Aspernatur et quae rerum dolor doloribus ipsam quibusdam atque, quaerat at sint corporis optio velit aperiam facere id repudiandae adipisci consequatur dolore
+                praesentium! Assumenda suscipit fuga quo, obcaecati nam laboriosam ducimus rerum aliquam. Dicta, facilis unde qui laudantium similique sapiente deserunt consequatur assumenda necessitatibus quas, fugiat quaerat molestiae saepe doloremque?
+                Porro totam unde odit eum perspiciatis assumenda recusandae.</p>
+        </div>
+
+    </div>
+
+    <!--=======================
+     voice assistant 
+    ==========================-->
+    <div id="Voice_recognition" class="assistant_section">
+        <h3>i Am <span>Doremi</span></h3>
+
+        <div class="container">
+            <!-- <h4>Press And Talk With <span>Doremi</span></h4> -->
+            <img src="img/voice12.gif" alt="Doremi"> <br/>
+            <!-- <button id="btn" onclick ="recognition.start()"><img src="img/voicebtn.gif"></button> -->
+            <div onclick="recognition.start()"><img src="img/voicebtn1.png"></div>
+            <h3 id="result"></h3>
+        </div>
+
+    </div>
+
+    <!--============================
+                teams section   
+    ============================-->
+
+    <div id="team" class="team_section">
+        <div class="container_of_teams_section">
+            <h5>A Passionate Team</h5>
+            <h2>Awesome Leaders</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos dolore magni itaque error nemo tenetur quae expedita velit id quaerat quisquam quo fugiat ratione, obcaecati ullam placeat quos, ex exercitationem? Laudantium corrupti nihil
+                sint optio impedit maxime accusamus. Debitis eveniet iusto quisquam inventore possimus ipsam rem. Dolore repellat error corporis!</p>
+            <div class="row_of_team">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="single_team_member">
+                        <div class="img_of_teamMember">
+                            <img src="img/ritu.jpg" alt="Rohan_mehta">
+                            <div class="teamMember_social_details">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="text_for_img">
+                            <h3>Rohan Mehta</h3>
+                            <h5>Backend Developer</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="single_team_member">
+                        <div class="img_of_teamMember">
+                            <img src="img/ujjwal.jpeg" alt="Ujjwal Deval">
+                            <div class="teamMember_social_details">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/ujjwaldeval.2000" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.instagram.com/ujjwal_deval?r=nametag" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/ujjwal-deval-373bb2198" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="text_for_img">
+                            <h3>Ujjwal Deval</h3>
+                            <h5>Front-End Developer</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="single_team_member">
+                        <div class="img_of_teamMember">
+                            <img src="img/kavya.jpg" alt="Kavya Manral">
+                            <div class="teamMember_social_details">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.instagram.com/_.kavya_01._?r=nametag" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/rajani-manral-2806ba172" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="text_for_img">
+                            <h3>Rajani Manral</h3>
+                            <h5>Content Writer</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--==========================
+     Footer Start
+    ===============================-->
+    <footer class="FooterOfDoremi">
+        <h2>All copyrights @UjjwalDeval </h2>
+
+    </footer>
+
+</body>
+
+</html>
